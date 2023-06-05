@@ -12,35 +12,49 @@
 
 <body>
     <div class="div-container">
-        <h1>Velkommen til "prosjekt navn" <br>sin nettisde</h1>
+        <h1>Velkommen til Kunnskapsbasen AS sin nettside</h1>
+        <h3>Det er en læringsverktøy nettside til videregående skoler inne Medie og IT</h3>
         <div class="line"></div>
 
-        <div class="form-div">
-            <div class="sign-up-div">
+        <div class="logg-inn">
+            <button onclick="logginnPopup()">Logg Inn</button>
+        </div>
 
-                <div class="title">Logg inn</div>
+        <div id="popupContainer signup-popup">
+            <div id="popup">
+                <div class="sign-up-div">
 
-                <div class="form">
-                    <div class="username">
-                        <input id="email" type="text" placeholder="Email">
+                    <div class="title">Logg inn</div>
+
+                    <div class="form">
+                        <div class="username">
+                            <input id="email" type="text" placeholder="Email">
+                        </div>
+                        <div class="password">
+                            <input id="password" type="password" placeholder="Password">
+                        </div>
                     </div>
-                    <div class="password">
-                        <input id="password" type="password" placeholder="Password">
+                    <div class="btn">
+                        <button onclick="login()">Sign In</button>
                     </div>
                 </div>
-                <div class="btn">
-                    <button onclick="login()">Sign In</button>
-                </div>
+                <button id="closeBtn" onclick="closePopup()">Close</button>
             </div>
+        </div>
 
 
 
-            <div class="sign-up-div">
+        <div class="registrer">
+            <button>Registrer deg</button>
+        </div>
 
-                <div class="title">Lag en konto</div>
+        <div id="popupContainer">
+            <div id="popup">
+                <div class="sign-up-div">
 
-                <div class="form sign-up-form">
-                    <div class="brake-one">
+                    <div class="title">Lag en konto</div>
+
+                    <div class="form sign-up-form">
                         <div>
                             <input id="brukerKat" type="text" placeholder="Brukerkategori">
                         </div>
@@ -53,11 +67,7 @@
                         <div>
                             <input id="address" type="text" placeholder="Adresse">
                         </div>
-                        <div class="btn">
-                            <button onclick="signUp()">Sign Up</button>
-                        </div>
-                    </div>
-                    <div class="brake-two">
+
                         <div>
                             <input id="zip" type="number" maxlength="4" placeholder="Post nr">
                         </div>
@@ -70,10 +80,25 @@
                         <div>
                             <input id="new_password" type="password" placeholder="Passord">
                         </div>
+                        <div>
+                            <label for="checkbox">Aksepter betingelsen av <a
+                                    href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/">GDPR</a></label>
+                            <input type="checkbox" type="GDPR" required>
+                        </div>
+                        <div class="btn">
+                            <button onclick="signUp()">Sign Up</button>
+                        </div>
+                        <button id="closeBtn" onclick="closePopup()">Close</button>
                     </div>
-
-
                 </div>
+
+
+
+
+
+
+            </div>
+            <div class="form-div">
             </div>
         </div>
     </div>
@@ -83,7 +108,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
 
+    <script src="js/popup.js"></script>
     <script src="js/signup.js"></script>
+
 </body>
 
 </html>
