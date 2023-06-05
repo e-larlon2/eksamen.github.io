@@ -5,7 +5,6 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    margin: 0;
 }
 
 .div-container {
