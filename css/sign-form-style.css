@@ -1,7 +1,7 @@
 /*   css fil til sign in page       */
 .form-div {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .sign-up-div,
@@ -9,9 +9,9 @@
     position: relative;
     text-align: center;
     margin: auto;
-    height: 80dvh;
-    width: 80%;
-    padding: 3%;
+    height: 50dvh;
+    width: 100%;
+    margin-top: 50px;
 }
 
 /*      form style                    */
@@ -67,6 +67,6 @@
 
 
 .btn button:hover {
-   background-color: #062946;
+    background-color: #062946;
     color: #fdfaf6;
 }

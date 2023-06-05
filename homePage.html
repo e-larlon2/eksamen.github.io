@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/homePage.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/contentBox.css">
     <script>
         const uid = sessionStorage.getItem("uid");
         if (uid == null) {
@@ -21,44 +22,98 @@
 <body>
     <div class="container">
         <div class="main-header">
-            Kunnskapsbasen AS
+            Læringsverktøy
             <button onclick="logout()">Logg ut</button>
         </div>
 
         <div class="content-larger">
-            <h1>Læringsverktøy</h1>
-<div class="frow">
-            <div class="content-box">
-                <img src="../bilde/bilde1.png" alt="NDLA ">
-                <a href="https://ndla.no/utdanning/informasjonsteknologi-og-medieproduksjon">Lesestoff</a>
+
+            <div class="it-column">
+
+                <div class="leStoff-div">
+                    <div class="text-box">
+                        <h3>IT LeseStoff</h3>
+                    </div>
+                    <div class="content-box">
+                        <img src="../bilde/bilde1.png" alt="NDLA ">
+                        <a href="https://ndla.no/utdanning/informasjonsteknologi-og-medieproduksjon">Lesestoff</a>
+                    </div>
+
+                </div>
+
+                <div class="verktøy-div">
+                    <div class="text-box">
+                        <h3>IT Verktøy</h3>
+                    </div>
+
+                    <div class="content-box">
+                        <img src="" alt="">
+                        <a href="#">tekst </a>
+                    </div>
+
+                </div>
+
+                <div class="onlineRes-div">
+
+                    <div class="text-box">
+                        <h3>IT Online Ressurser</h3>
+                    </div>
+
+                    <div class="content-box">
+                        <img src="" alt="bile">
+                        <a href="#">tekst </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="medie-column">
+
+                <div class="leStoff-div">
+
+                    <div class="text-box">
+                        <h3>Medie LeseStoff</h3>
+                    </div>
+
+                    <div class="content-box">
+                        <img src="../bilde/bilde1.png" alt="NDLA ">
+                        <a href="https://ndla.no/utdanning/informasjonsteknologi-og-medieproduksjon">Lesestoff</a>
+                    </div>
+                </div>
+
+                <div class="verktøy-div">
+
+                    <div class="text-box">
+                        <h3>Medie Verktøy</h3>
+                    </div>
+
+                    <div class="content-box">
+                        <img src="" alt="">
+                        <a href="#">tekst </a>
+                    </div>
+
+                </div>
+
+                <div class="onlineRes-div">
+
+                    <div class="text-box">
+                        <h3>Medie Online Ressurser</h3>
+                    </div>
+
+                    <div class="content-box">
+                        <img src="" alt="bile">
+                        <a href="#">tekst </a>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="content-box">
-                <img src="" alt="">
-                <a href="https://ndla.no">NDLA </a>
-            </div>
         </div>
-        <div class="srow">
-            <div class="content-box">
-                <img src="" alt="">
-                <a href="https://ndla.no">NDLA </a>
-            </div>
 
-            <div class="content-box">
-                <img src="" alt="">
-                <a href="https://ndla.no">NDLA </a>
-            </div>
-        </div>
-
-
-        </div>
+        <!--
         <div class="content-small">
-            Info <br>
-            Dette er en læringsverktøy nettside for Kunnskapsbasen AS
 
-        </div>
-        <div class="content-small">
-<!--
             <main>
                 <h1>Her kan du se og endre profiler</h1>
 
@@ -126,8 +181,13 @@
 
                 </div>
             </main>
--->
+        </div>-->
+
+        <div class="footer">
+            <p> Info Dette er en læringsverktøy nettside for Kunnskapsbasen AS
+            </p>
         </div>
+
     </div>
 
     <!-- Må hente inn eksterne rammeverk/bibliotek for å kunne laste inn js frå anna fil-->
@@ -137,8 +197,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
 
-  <script src="js/users.js"></script>
-  <script src="js/logout.js"></script>
+    <!-- <script src="js/users.js"></script>-->
+    <script src="js/logout.js"></script>
 
 </body>
 

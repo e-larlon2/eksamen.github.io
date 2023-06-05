@@ -12,8 +12,10 @@
 
 <body>
     <div class="div-container">
-        <h1>Velkommen til Kunnskapsbasen AS sin nettside</h1>
-        <h3>Det er en læringsverktøy nettside til videregående skoler inne Medie og IT</h3>
+        <div class="header">
+            <h1>Velkommen til Kunnskapsbasen AS sin nettside</h1>
+            <h3>Det er en læringsverktøy nettside til videregående skoler inne Medie og IT</h3>
+        </div>
         <div class="line"></div>
 
         <div class="form-div">
@@ -54,9 +56,6 @@
                         <div>
                             <input id="address" type="text" placeholder="Adresse">
                         </div>
-                        <div class="btn">
-                            <button onclick="signUp()">Sign Up</button>
-                        </div>
                     </div>
                     <div class="brake-two">
                         <div>
@@ -71,6 +70,14 @@
                         <div>
                             <input id="new_password" type="password" placeholder="Passord">
                         </div>
+                    </div>
+                    <div>
+                        <label for="checkbox">Aksepter betingelsene i henhold av <a
+                                href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/">GDPR</a></label>
+                        <input type="checkbox" type="GDPR" required>
+                    </div><br>
+                    <div class="btn">
+                        <button onclick="signUp()">Sign Up</button>
                     </div>
 
 

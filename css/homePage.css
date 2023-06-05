@@ -1,38 +1,28 @@
-
 .container {
-
     width: 100vw;
     height: 100vh;
     font-size: 20px;
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px 1fr 3fr;
-
+    grid-template-rows: 150px 2fr 1fr;
     gap: 10px;
-    padding: 10px;
     box-sizing: border-box;
 }
 
 .main-header,
 .content-larger,
-.content-small {
+.footer {
     padding: 10px;
-    border: 1px solid red;
-    border-radius: 10px;
-    border-width: 3px;
     text-align: center;
 }
 
 .main-header {
-    grid-column-start: 1;
-    grid-column-end: 4;
     display: grid;
-    grid-template-columns: 3fr 1.45fr;
-    font-size: 60px;
+    grid-template-columns: 70% 30%;
+    font-size: 100px;
     font-weight: bolder;
     text-align: center;
-
+    background-color: #237dc7;
+    color: white;
 }
 
 .main-header button {
@@ -40,55 +30,30 @@
     color: white;
     cursor: pointer;
     border: none;
-    font-size: xx-large;
+    font-size: 50px;
     border-radius: 10px;
     border-width: 4px;
 }
 
 .main-header button:hover {
     background-color: rgb(105, 104, 104);
-     color: white;
- }
+    color: white;
+}
 
 .content-larger {
-    grid-row-start: 2;
-    grid-row-end: span 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
 }
 
 
-.content-box {
-    background-color: lightgrey;
-    display: inline-block;
-    border-radius: 15px;
-    border-width: 4px;
-    width: 35dvh;
-    height: 22dvh;
-    grid-template-rows: 70% 30%;
-    gap: 20px;
-}
 
-.content-box img {
-    border-radius: 15px;
-    padding: 10px;
-    width: 400px;
-    height: 200px;
-}
-
-.content-box a{
-    border-radius: 10px;
-    border-width: 4px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #237dc7;
+    color: white;
     text-align: center;
-    border: none;
-    font-size: 30px;
-padding: 10px;
 }
