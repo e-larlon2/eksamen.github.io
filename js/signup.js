@@ -44,6 +44,7 @@ function signUp() {
     const address = document.getElementById("address").value;
     const zip = document.getElementById("zip").value;
     const city = document.getElementById("city").value;
+    const bK = document.getElementById("brukerKat").value;
     const uname = (fname.substring(0, 3) + lname.substring(0, 3)).toLowerCase();
     // Oppretter bruker som kan logge seg på firebase og få tilgang til nettstaden
     auth.createUserWithEmailAndPassword(email, password)
@@ -51,6 +52,7 @@ function signUp() {
         .then((userCredentials) => {
             sessionStorage.setItem("uid", userCredentials.user.uid)
             db.collection("users").doc().set({
+                brukerkategori: bK,
                 firstname: fname,
                 lastname: lname,
                 username: uname,

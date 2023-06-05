@@ -23,6 +23,7 @@ function getUsers() {
         querySnapshot.forEach((doc) => {
             docid = "'" + doc.id + "'";   
             users += "<tr>" +
+                "<td>" + doc.data().brukerKat + "</td>" +
                 "<td>" + doc.data().username + "</td>" +
                 "<td>" + doc.data().firstname + "</td>" +
                 "<td>" + doc.data().lastname + "</td>" +
