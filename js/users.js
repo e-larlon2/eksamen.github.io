@@ -67,7 +67,7 @@ function updateUser(docid) {
         .then(() => {
             console.log("Document successfully updated!");
             // Redirecter til users.html 
-            window.location.href = "/html/homePage.html";
+            window.location.href = "homePage.html?uid=" + userCredentials.user.uid;
         })
         .catch((error) => {
             // The document probably doesn't exist.
@@ -104,7 +104,7 @@ function removeUser(docid) {
     db.collection("users").doc(docid).delete().then(() => {
         console.log("Document successfully deleted!");
         alert("Bruker er slettet");
-        window.location.href = "/html/homePage.html?uid=" + userCredentials.user.uid;
+        window.location.href = "homePage.html?uid=" + userCredentials.user.uid;
     }).catch((error) => {
         console.error("Error removing document: ", error);
     });
