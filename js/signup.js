@@ -27,7 +27,7 @@ function login() {
             // Oppretter ein sessionStorage variabel i nettlesaren. Denne brukes for å sjå om bruker er pålogga.
             sessionStorage.setItem("uid", userCredentials.user.uid)
             // Redirect to home.html 
-            window.location.href = "/homePage.html?uid=" + userCredentials.user.uid;
+            window.location.href = "homePage.html?uid=" + userCredentials.user.uid;
         })
         .catch((error) => {
             console.error("Failed: " + error.message);
@@ -63,7 +63,7 @@ function signUp() {
                 userId: userCredentials.user.uid
             })
                 .then(function () {
-                    window.location.href = "/homePage.html?uid=" + userCredentials.user.uid;
+                    window.location.href = "homePage.html?uid=" + userCredentials.user.uid;
                 })
         })
 
