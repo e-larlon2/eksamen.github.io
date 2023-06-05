@@ -1,0 +1,30 @@
+body {
+    background-color: #fdfaf6;
+    color: #090502;
+    position: relative;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+}
+
+.div-container {
+    position: relative;
+    margin: auto;
+    left: 0;
+    text-align: center;
+    width: 65vw;
+    height: 100vh;
+    font-size: 60px;
+    padding: 10px;
+}
+
+.line {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    border: 3px solid #237dc7;
+    border-radius: 15px;
+    width: 100%;
+}
+

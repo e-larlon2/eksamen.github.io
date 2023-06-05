@@ -1,0 +1,42 @@
+/*     form style             */
+
+main {
+    max-width: 1390px;
+    margin: auto;
+}
+
+#userform {
+    display: none;
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 26px;
+}
+
+/************ TABELL **************/
+th {
+    padding-right: 20px;
+}
+
+#tableLink {
+    color: blue;
+}
+
+#tableLink:hover {
+    cursor: pointer;
+}
+
+.users {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.users td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+/************ END TABELL **********/
