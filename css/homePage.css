@@ -64,3 +64,20 @@
     margin-top: 0;
 }
 
+.footer {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.in-footer{
+    background-color: #237dc7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
