@@ -75,7 +75,7 @@ if (checkBox.checked){
             console.log(err.message);
         });
     }else {
-        alert("kasepter betingelsen")
+        alert("akasepter betingelsen")
     }
 
 
