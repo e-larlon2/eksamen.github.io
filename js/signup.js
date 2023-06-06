@@ -46,6 +46,7 @@ function signUp() {
     const city = document.getElementById("city").value;
     const bK = document.getElementById("brukerKat").value;
     const uname = (fname.substring(0, 3) + lname.substring(0, 3)).toLowerCase();
+    const checkBox = document.getElementById("checkBox").value;
     // Oppretter bruker som kan logge seg på firebase og få tilgang til nettstaden
     auth.createUserWithEmailAndPassword(email, password)
         // Lagrer også brukeren i collection "users"
