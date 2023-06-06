@@ -41,17 +41,16 @@
             <div class="sign-up-div">
 
                 <div class="title">Lag en konto</div>
-
                 <div class="form sign-up-form">
                     <div class="brake-one">
                         <div>
                             <input id="brukerKat" type="text" placeholder="Brukerkategori">
                         </div>
                         <div>
-                            <input id="fname" type="text" placeholder="Fornavn">
+                            <input id="fname" type="text" placeholder="Fornavn" required>
                         </div>
                         <div>
-                            <input id="lname" type="text" placeholder="Etternavn">
+                            <input id="lname" type="text" placeholder="Etternavn" required>
                         </div>
                         <div>
                             <input id="address" type="text" placeholder="Adresse">
@@ -65,10 +64,10 @@
                             <input id="city" type="text" placeholder="Poststed">
                         </div>
                         <div>
-                            <input id="new_email" type="email" placeholder="Email">
+                            <input id="new_email" type="email" placeholder="Email" required>
                         </div>
                         <div>
-                            <input id="new_password" type="password" placeholder="Passord">
+                            <input id="new_password" type="password" placeholder="Passord" required>
                         </div>
                     </div>
                     <div>
@@ -76,13 +75,21 @@
                                 href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/">GDPR</a></label>
                         <input id="checkBox" type="checkbox" type="GDPR" required>
                     </div><br>
+
                     <div class="btn">
                         <button onclick="signUp()">Sign Up</button>
                     </div>
 
-
                 </div>
             </div>
+        </div>
+
+        <div class="footer">
+            <div class="line btm-line"></div>
+            <div class="in-footer">
+            <p> Info Dette er en læringsverktøy nettside for Kunnskapsbasen AS
+            </p>
+        </div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
