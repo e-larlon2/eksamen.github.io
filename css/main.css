@@ -59,3 +59,19 @@ body {
 #title{
     color:white;
 }
+
+.info-div{
+    width: 80%;
+    position: relative;
+    margin:auto;
+}
+
+.info-div button{
+    margin-top: 2%;
+}
+
+li {
+    margin: 20px;
+    text-align: left;
+    font-size: 24px;;
+}

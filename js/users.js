@@ -16,10 +16,14 @@ const auth = firebaseApp.auth();
 const userid = sessionStorage.getItem("uid");
 let docid = "";
 
+
+
 // Denne henter alle brukerene i collection "users". 
 function getUsers() {
     let users = document.getElementById("usertable").innerHTML;
-    db.collection("users").get().then((querySnapshot) => {
+    db.collection("users").get()
+
+    .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             docid = "'" + doc.id + "'";   
             users += "<tr>" +
@@ -34,10 +38,10 @@ function getUsers() {
         });
         document.getElementById("usertable").innerHTML = users;
     });
-
-
 }
 getUsers();
+
+
 
 
 // OPPDATERE ELEMENT I DATABASE 

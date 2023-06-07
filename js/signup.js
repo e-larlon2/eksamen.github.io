@@ -58,7 +58,8 @@ function signUp() {
                     username: uname,
                     city: city,
                     email: email,
-                    userId: userCredentials.user.uid
+                    userId: userCredentials.user.uid,
+                    checkBox: checkBox.checked
                 })
                     .then(function () {
                         window.location.href = "homePage.html?uid=" + userCredentials.user.uid;
