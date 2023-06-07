@@ -16,10 +16,6 @@ const auth = firebaseApp.auth();
 function logout() {
     auth.signOut().then(() => {
         sessionStorage.removeItem("uid");
-<<<<<<< Updated upstream
         window.location.href = "index.html";
-=======
-        window.location.href = "../index.html";
->>>>>>> Stashed changes
     });
 }
