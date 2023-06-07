@@ -27,8 +27,6 @@ function getUsers() {
                 "<td>" + doc.data().username + "</td>" +
                 "<td>" + doc.data().firstname + "</td>" +
                 "<td>" + doc.data().lastname + "</td>" +
-                "<td>" + doc.data().address + "</td>" +
-                "<td>" + doc.data().zip + "</td>" +
                 "<td>" + doc.data().city + "</td>" +
                 '<td id="tableLink" onclick="showUpdateForm(' + docid + ')"> Endre bruker </td>' +
                 '<td id="tableLink" onclick="removeUser(' + docid + ')"> Slett bruker </td>' +
