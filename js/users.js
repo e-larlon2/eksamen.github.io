@@ -23,7 +23,7 @@ function getUsers() {
         querySnapshot.forEach((doc) => {
             docid = "'" + doc.id + "'";   
             users += "<tr>" +
-                "<td>" + doc.data().brukerKat + "</td>" +
+                "<td>" + doc.data().brukerkategori + "</td>" +
                 "<td>" + doc.data().username + "</td>" +
                 "<td>" + doc.data().firstname + "</td>" +
                 "<td>" + doc.data().lastname + "</td>" +
@@ -43,11 +43,10 @@ getUsers();
 // OPPDATERE ELEMENT I DATABASE 
 function updateUser(docid) {
     var user = db.collection("users").doc(docid);
+    const bK = document.getElementById("bK").value;
     const fname = document.getElementById("fname").value;
     const lname = document.getElementById("lname").value;
     const uname = (fname.substring(0, 3) + lname.substring(0, 3)).toLowerCase();
-    const address = document.getElementById("address").value;
-    const zip = document.getElementById("zip").value;
     const city = document.getElementById("city").value;
 
 
@@ -55,12 +54,12 @@ function updateUser(docid) {
 
     // Oppdater bruker i firestore
     return user.update({
+        brukerkategori: bK,
         firstname: fname,
         lastname: lname,
         username: uname,
-        address: address,
-        zip: zip,
         city: city
+
     })
         .then(() => {
             console.log("Document successfully updated!");
@@ -82,12 +81,10 @@ function showUpdateForm(docid) {
         querySnapshot.forEach((doc) => {
             // Sjekker om doc-iden er den samme for den brukaren me skal redigere 
             if (docid == doc.id) {
+                document.getElementById("bK").value = doc.data().brukerkategori;
                 document.getElementById("fname").value = doc.data().firstname;
                 document.getElementById("lname").value = doc.data().lastname;
-                document.getElementById("address").value = doc.data().address;
                 document.getElementById("city").value = doc.data().city;
-                document.getElementById("zip").value = doc.data().zip;
-
             }
         });
     })

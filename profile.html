@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script>
+        const uid = sessionStorage.getItem("uid");
+        if (uid == null) {
+            window.location.href = "index.html";
+        }  
+    </script>
+
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-header">
+            <a href="homePage.html" id="title">Læringsverktøy</a>   
+            <button><a href="profile.html">Profil</a></button>
+            <button onclick="logout()">Logg ut</button>
+
+        </div>
+
+        <div class="content-profile">
+            <div class="line top-line"></div>
+            <main>
+                <h1>Her kan du se og endre profiler</h1>
+
+                <div>
+                    <table class="users" id="usertable">
+                        <tr>
+                            <th>
+                                Bruker-Kategori
+                            </th>
+                            <th>
+                                Brukernavn
+                            </th>
+                            <th>
+                                Fornavn
+                            </th>
+                            <th>
+                                Etternavn
+                            </th>
+                            <th>
+                                Poststed
+                            </th>
+                            <th>
+                                Endre
+                            </th>
+                            <th>
+                                Slett
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="userform">
+                    <div>
+                        <label>Bruker-Kategori:</label><br>
+                        <input id="bK" type="text">
+                    </div>
+                    <div>
+                        <label>Fornavn:</label><br>
+                        <input id="fname" type="text">
+                    </div>
+                    <div>
+                        <label>Etternavn:</label><br>
+                        <input id="lname" type="text">
+                    </div>
+                    <div>
+                        <label>Poststed:</label><br>
+                        <input id="city" type="text">
+                    </div><br>
+
+                    <div class="signUpBox">
+                        <button id="btnUpdate" onclick="updateUser()">Lagre endringer</button>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+        <div class="footer">
+            <div class="line btm-line"></div>
+            <div class="in-footer">
+                <p> © 2023 Kunnskapsbasen AS</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Må hente inn eksterne rammeverk/bibliotek for å kunne laste inn js frå anna fil-->
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+
+    <script src="js/users.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+
+</html>
