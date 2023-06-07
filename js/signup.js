@@ -71,7 +71,7 @@ function signUp() {
                 console.log(err.message);
             });
     } else {
-        alert("akasepter betingelsen")
+        alert("Akasepter betingelsen i henhold av GDPR, du kan lese mer om GDPR ved å trykke på linken (GDPR)")
     }
 
 
